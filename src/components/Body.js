@@ -16,17 +16,17 @@ const Body = () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9052013&lng=77.6865383&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json);
-        setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
-    return listOfRestaurants.length === 0? (<Shimmer />) :(
+    return listOfRestaurants.length === 0 ? (<Shimmer />) :(
         <div className="body">
             <div className="filter">
                 <div className="search">
                 <input type="text" className="search-box" value={searchText} onChange={(e) => {
                     setSearcText(e.target.value);
-                    console.log(searchText);
+                   // console.log(searchText);
                 }}/>
                 <button onClick={() => {
                     const filterSearchRestaurants = listOfRestaurants.filter(
