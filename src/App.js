@@ -3,23 +3,39 @@ import ReactDOM from "react-dom/client"
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import About from "./components/About";
+// import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
+import { useEffect, useState} from "react";
+import UserContext from "./utils/UserContext";
 // import Grocery from "./components/Grocery";
 
 const AppLayout = () => {
-    return(
+
+    const [userName, setUserName] = useState(" ");
+
+    useEffect(() => {
+
+        const data = {
+            name: "Krishana",
+        }
+        setUserName(data.name);
+    }, []);
+
+    return (
         <div>
-            <Header />
-            <Outlet />
+            <UserContext.Provider value={{loggedInUser:userName, setUserName}}>
+                <Header />
+                <Outlet />
+            </UserContext.Provider>
         </div>
     )
 }
 
 const Grocery = lazy(() => import("./components/Grocery"));
+const About = lazy(() => import("./components/About"));
 
 const appRouter = createBrowserRouter([
     {
@@ -32,7 +48,7 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <About />,
+                element: <Suspense fallback={<Shimmer />}><About /></Suspense>,
             },
             {
                 path: "/contact",

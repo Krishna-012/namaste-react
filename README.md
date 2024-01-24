@@ -18,4 +18,7 @@
         -links
         -address
         -contact
+
+        const itemCardsBefore = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card.itemCards;
+    const itemCardsAfter = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.itemCards;
 */ -->
