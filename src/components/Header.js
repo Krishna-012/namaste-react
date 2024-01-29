@@ -4,13 +4,18 @@ import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useContext } from "react";
 import UserContext from "../utils/UserContext";
+import {useSelector} from "react-redux";
+
 
 const Header = () => {
     const [btnNameReact, setbtnNameReact] = useState("Login");
     const onlineStatus = useOnlineStatus();
 
-    const {loggedInUser} = useContext(UserContext);
+    const cartItems = useSelector((store) => store.cart.items);
+    // console.log(cartItems);
 
+
+    const {loggedInUser} = useContext(UserContext);
     return (
         <div className="flex justify-between bg-slate-200 shadow-lg">
             <div className="p-4">
@@ -22,7 +27,7 @@ const Header = () => {
                     <li className="px-4 hover:bg-slate-300 hover:rounded-lg">
                         <Link to="/">Home</Link>
                     </li>
-                    <li className="px-4  hover:bg-slate-300 hover:rounded-lg">
+                    <li className="px-4 hover:bg-slate-300 hover:rounded-lg">
                         <Link to="/about">About Us</Link>
                     </li>
                     <li className="px-4  hover:bg-slate-300 hover:rounded-lg">
@@ -31,8 +36,8 @@ const Header = () => {
                     <li className="px-4  hover:bg-slate-300 hover:rounded-lg">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="px-4">Cart</li>
-                    <button className="px-4  hover:bg-slate-300 hover:rounded-lg" onClick={() => {
+                    <li className="px-4  hover:bg-slate-300 hover:rounded-lg"><Link to="/cart">Cart ({cartItems.length})</Link></li>
+                    <button className="px-4 hover:bg-slate-300 hover:rounded-lg" onClick={() => {
                         btnNameReact === "Login" ? setbtnNameReact("Logout")
                         : setbtnNameReact("Login");
                     }}>{btnNameReact}</button>

@@ -22,3 +22,11 @@
         const itemCardsBefore = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card.itemCards;
     const itemCardsAfter = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.itemCards;
 */ -->
+
+# Redux toolkit
+-Install @redux/toolkit and react-redux
+-build our store
+-connect our store to our app
+-slice(cart slice)
+-dispatch action
+-slector
