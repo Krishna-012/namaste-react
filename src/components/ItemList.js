@@ -9,13 +9,13 @@ const ItemList = ({items}) => {
 
     const handleclick = (items) => {
         dispatch(addItem(items));
-        console.log(addItem);
+        // console.log(addItem);
     }
 
     return (
         <div>
             {items.map((resItems) => <div key={resItems.card.info.id}>
-                <div className="flex justify-between p-2">
+                <div data-testid="foodItems" className="flex justify-between p-2">
                     <div className="w-9/12">
                         <span className="text-[16px] font-sans py-2">
                             {resItems.card.info.name}

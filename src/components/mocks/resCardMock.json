@@ -1,0 +1,70 @@
+{
+    "info": {
+        "id": "759420",
+        "name": "Sandwich 2 Poha",
+        "cloudinaryImageId": "27d43f8a2c1ca62704bb2dfd88d5b268",
+        "locality": "Chikkanayakanahalli Road",
+        "areaName": "Bellandur Sarjapur",
+        "costForTwo": "₹250 for two",
+        "cuisines": [
+            "Fast Food",
+            "Snacks",
+            "Indian",
+            "Beverages"
+        ],
+        "avgRating": 4.5,
+        "parentId": "329823",
+        "avgRatingString": "4.5",
+        "totalRatingsString": "100+",
+        "sla": {
+            "deliveryTime": 22,
+            "lastMileTravel": 2.3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "20-25 mins",
+            "lastMileTravelString": "2.3 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-02-04 23:00:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "aggregatedDiscountInfoV2": {},
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "isNewlyOnboarded": true,
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-14a619f2-b148-4371-9042-644df4360d3b"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/sandwich-2-poha-chikkanayakanahalli-road-bellandur-sarjapur-bangalore-759420",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

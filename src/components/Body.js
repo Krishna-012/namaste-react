@@ -24,7 +24,8 @@ const Body = () => {
         <div className="body">
             <div className="flex">
                 <div className="p-4">
-                <input 
+                <input
+                    data-testid="SearchInput"
                     type="text" 
                     className="border border-solid border-black rounded-lg" 
                     value={searchText} 
